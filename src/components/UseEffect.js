@@ -1,0 +1,21 @@
+import React, { useState, useEffect } from 'react';
+
+const Timer = () => {
+  const [count, setCount] = useState(0);
+
+  // useEffect hook to update document title
+  useEffect(() => {
+   console.log( `You clicked ${count} times`);
+  },[count]);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+};
+
+export default Timer;
